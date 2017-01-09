@@ -131,7 +131,7 @@ set -e
 # See [`bin/steps/pylibmc`](pylibmc.html).
 source $BIN_DIR/steps/pylibmc
 
-# Run post_activate venv hook
+# Run pre_activate venv hook
 run-hook bin/pre_activate
 
 # Activate the Virtualenv.
