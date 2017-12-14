@@ -110,7 +110,7 @@ puts-step "Preparing Python interpreter"
 puts-step "Creating Virtualenv ($(virtualenv --version))"
 
 # Try to create the virtualenv.
-OUT=$(virtualenv --python $PYTHON_EXE --never-download --prompt='(venv) ' $VIRTUALENV_LOC 2>&1)
+OUT=$(virtualenv --python $PYTHON_EXE --prompt='(venv) ' $VIRTUALENV_LOC 2>&1)
 
 [ $? -ne 0 -o -n "$CLEAN_VIRTUALENV" ] && {
   if [ -n "$CLEAN_VIRTUALENV" ]
