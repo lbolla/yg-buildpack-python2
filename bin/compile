@@ -70,6 +70,11 @@ source $BIN_DIR/utils
 # Switch to the repo's context.
 cd $BUILD_DIR
 
+# Source some environment: useful to set environmental variables for the build
+if [ -f bin/environment ]; then
+    source bin/environment
+fi
+
 # Run pre_compile hook.
 run-hook bin/pre_compile
 
